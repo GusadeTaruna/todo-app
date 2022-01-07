@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import { useDispatch } from "react-redux";
 import { addUser } from "../slice/userSlice";
+import formStyle from "../style/Form.module.css";
 
 const Form = () => {
   const [enteredTitle, setTitle] = useState("");
@@ -29,23 +30,27 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={addUserHandler}>
-      <h1>Todo App</h1>
-      <input
-        type="text"
-        placeholder="What you gonna do?"
-        value={enteredTitle}
-        onChange={titleChangeHandler}
-      ></input>
-      <br />
-      <input
-        type="text"
-        placeholder="Tell me the detail!"
-        value={enteredDetail}
-        onChange={detailChangeHandler}
-      ></input>
-      <Button />
-    </form>
+    <div className={formStyle["form-container"]}>
+      <form onSubmit={addUserHandler}>
+        <div className={formStyle.content}>
+          <h1>Todo App</h1>
+          <input
+            type="text"
+            placeholder="What you gonna do?"
+            value={enteredTitle}
+            onChange={titleChangeHandler}
+          ></input>
+          <br />
+          <input
+            type="text"
+            placeholder="Tell me the detail!"
+            value={enteredDetail}
+            onChange={detailChangeHandler}
+          ></input>
+          <Button />
+        </div>
+      </form>
+    </div>
   );
 };
 

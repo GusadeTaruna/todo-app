@@ -1,0 +1,12 @@
+.form-container{
+    /* border: 1px solid black; */
+    padding: 20px;
+}
+
+.form-container .content{
+    width: 30%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    /* border: 1px solid red; */
+}

@@ -1,0 +1,18 @@
+.list-container {
+  padding: 0 30px;
+}
+
+.itemList {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px 100px;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+}
+
+.todoTitle,
+.todoDetail {
+  margin: 5px 0;
+}

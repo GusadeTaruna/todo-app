@@ -1,10 +1,11 @@
 import React from "react";
+import listStyle from '../../style/List.module.css'
 
-const ListItem = ({id, title, detail}) => {
+const ListItem = (props) => {
   return (
     <div>
-      <h3>Todo: {title}</h3>
-      <p>Detail: {detail}</p>
+      <p className={listStyle.todoTitle}>{props.title}</p>
+      <p className={listStyle.todoDetail}>{props.detail}</p>
     </div>
   );
 };
